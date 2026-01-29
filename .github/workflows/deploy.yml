@@ -26,7 +26,7 @@ jobs:
       run: pnpm install
 
     - name: Build web
-      run: pnpm build:web
+      run: cd web && pnpm install && pnpm run build
 
     - name: Add .nojekyll file
       run: touch ./web/dist/.nojekyll
