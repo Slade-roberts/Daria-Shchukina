@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Announcement } from '@/lib/types'
+import { Link } from 'react-router-dom'
+import { Announcement } from '../lib/types'
 
 interface AnnouncementBannerProps {
   announcement: Announcement
@@ -11,9 +11,9 @@ export default function AnnouncementBanner({ announcement }: AnnouncementBannerP
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-sm">
           {announcement.link ? (
-            <Link href={announcement.link} className="underline hover:no-underline">
+            <a href={announcement.link} className="underline hover:no-underline" target="_blank" rel="noopener noreferrer">
               {announcement.message}
-            </Link>
+            </a>
           ) : (
             announcement.message
           )}

@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import { urlFor } from '@/lib/image'
-import { Publication } from '@/lib/types'
-import Image from 'next/image'
+import { Link } from 'react-router-dom'
+import { urlFor } from '../lib/image'
+import { Publication } from '../lib/types'
 
 interface PublicationCardProps {
   publication: Publication
@@ -12,17 +11,16 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       {publication.coverImage && (
         <div className="relative h-48">
-          <Image
-            src={urlFor(publication.coverImage).url()}
+          <img
+            src={urlFor(publication.coverImage).width(400).height(300).fit('crop').url()}
             alt={publication.title}
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
       )}
       <div className="p-6">
         <h3 className="text-xl font-serif font-bold mb-2 text-accent">
-          <Link href={`/publications/${publication.slug.current}`} className="hover:underline">
+          <Link to={`/publications/${publication.slug.current}`} className="hover:underline">
             {publication.title}
           </Link>
         </h3>

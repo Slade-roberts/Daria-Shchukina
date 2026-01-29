@@ -1,4 +1,6 @@
-import { groq } from '@sanity/client'
+// groq is a template literal tag function for Sanity queries
+const groq = (strings: TemplateStringsArray, ...values: any[]) =>
+  strings.reduce((result, str, i) => result + str + (values[i] || ''), '')
 
 export const siteSettingsQuery = groq`
   *[_type == "siteSettings"][0] {

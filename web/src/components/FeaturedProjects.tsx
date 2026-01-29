@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import { urlFor } from '@/lib/image'
-import { Project } from '@/lib/types'
-import Image from 'next/image'
+import { Link } from 'react-router-dom'
+import { urlFor } from '../lib/image'
+import { Project } from '../lib/types'
 
 interface FeaturedProjectsProps {
   projects: Project[]
@@ -17,17 +16,16 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             <article key={project._id} className="bg-neutral-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
               {project.images?.[0] && (
                 <div className="relative h-48">
-                  <Image
-                    src={urlFor(project.images[0]).url()}
+                  <img
+                    src={urlFor(project.images[0]).width(400).height(300).fit('crop').url()}
                     alt={project.title}
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}
               <div className="p-6">
                 <h3 className="text-xl font-serif font-bold mb-2 text-accent">
-                  <Link href={`/projects/${project.slug.current}`} className="hover:underline">
+                  <Link to={`/projects/${project.slug.current}`} className="hover:underline">
                     {project.title}
                   </Link>
                 </h3>

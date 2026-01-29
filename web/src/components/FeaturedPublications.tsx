@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import { urlFor } from '@/lib/image'
-import { Publication } from '@/lib/types'
-import Image from 'next/image'
+import { Link } from 'react-router-dom'
+import { urlFor } from '../lib/image'
+import { Publication } from '../lib/types'
 
 interface FeaturedPublicationsProps {
   publications: Publication[]
@@ -17,17 +16,16 @@ export default function FeaturedPublications({ publications }: FeaturedPublicati
             <article key={pub._id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               {pub.coverImage && (
                 <div className="relative h-48">
-                  <Image
-                    src={urlFor(pub.coverImage).url()}
+                  <img
+                    src={urlFor(pub.coverImage).width(400).height(300).fit('crop').url()}
                     alt={pub.title}
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}
               <div className="p-6">
                 <h3 className="text-xl font-serif font-bold mb-2 text-accent">
-                  <Link href={`/publications/${pub.slug.current}`} className="hover:underline">
+                  <Link to={`/publications/${pub.slug.current}`} className="hover:underline">
                     {pub.title}
                   </Link>
                 </h3>

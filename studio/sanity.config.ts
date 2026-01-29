@@ -2,7 +2,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
-import schemas from './schemas'
+import schemas from './schemaTypes'
 
 export default defineConfig({
   name: 'daria-shchukina-studio',

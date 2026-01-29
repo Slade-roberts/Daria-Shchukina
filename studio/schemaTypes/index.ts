@@ -1,1 +1,3 @@
-export const schemaTypes = []
+import schemas from '../schemas'
+
+export default schemas
