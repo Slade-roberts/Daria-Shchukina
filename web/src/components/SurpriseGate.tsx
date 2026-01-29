@@ -47,4 +47,25 @@ export default function SurpriseGate({ children }: SurpriseGateProps) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent/10 to-neutral-100">
+      <div className="text-center p-8 bg-white rounded-lg shadow-lg max-w-md">
+        <h1 className="text-3xl font-serif mb-4 text-accent">This site is a surprise</h1>
+        <p className="mb-6 text-neutral-600">Enter the passcode to reveal the content.</p>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="password"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            placeholder="Enter code"
+            className="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-accent"
+            required
+          />
+          <button type="submit" className="btn w-full">
+            Enter
+          </button>
+        </form>
+        {error && <p className="mt-4 text-red-600">{error}</p>}
+      </div>
+    </div>
+  )
+}
