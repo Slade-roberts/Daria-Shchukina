@@ -16,19 +16,12 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission will be handled by Formspree
-    // The form will submit to the action URL
-  };
-
   return (
     <section id="contact" className="section">
       <h2>Contact</h2>
       <form 
         action="https://formspree.io/f/your-form-id" 
         method="POST"
-        onSubmit={handleSubmit}
         className="contact-form"
       >
         <div className="form-group">
