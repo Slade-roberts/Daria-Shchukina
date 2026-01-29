@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# Daria Shchukina - Literary Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive literary portfolio website for Daria Shchukina built with React. This portfolio showcases her work in English literature and translation.
+
+## Features
+
+- ✨ Clean, professional design with smooth scrolling navigation
+- 📱 Fully responsive (mobile, tablet, and desktop)
+- 🔍 SEO optimized with meta tags and sitemap
+- ⚡ Fast performance with React
+- 🎨 Custom styling with CSS
+- 📧 Contact form integration (Formspree)
+
+## Sections
+
+- **Home**: Welcome message and introduction
+- **Portfolio**: Showcase of literary work and translations
+- **About**: Background and expertise
+- **Contact**: Contact form for inquiries
+
+## Tech Stack
+
+- React 19.2.4
+- React Scripts 5.0.1
+- CSS3 (with responsive media queries)
+- GitHub Pages for hosting
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Slade-roberts/Daria-Shchukina.git
+cd Daria-Shchukina
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+The app will open at [http://localhost:3000/Daria-Shchukina](http://localhost:3000/Daria-Shchukina)
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000/Daria-Shchukina](http://localhost:3000/Daria-Shchukina) to view it in your browser.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run deploy`
+Deploys the app to GitHub Pages (requires gh-pages package).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow runs on every push to the `main` branch.
 
-### `npm run eject`
+**Live Site**: [https://slade-roberts.github.io/Daria-Shchukina](https://slade-roberts.github.io/Daria-Shchukina)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Manual Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To deploy manually:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run deploy
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+Daria-Shchukina/
+├── public/
+│   ├── index.html          # HTML template with SEO meta tags
+│   ├── sitemap.xml         # Sitemap for SEO
+│   ├── manifest.json       # PWA manifest
+│   └── robots.txt          # Robots.txt file
+├── src/
+│   ├── components/
+│   │   ├── Header.js       # Navigation header with smooth scrolling
+│   │   ├── Home.js         # Home section component
+│   │   ├── Portfolio.js    # Portfolio section component
+│   │   ├── About.js        # About section component
+│   │   ├── Contact.js      # Contact form component
+│   │   ├── Footer.js       # Footer component
+│   │   └── *.css           # Component-specific styles
+│   ├── App.js              # Main application component
+│   ├── App.css             # Global application styles
+│   ├── index.js            # Application entry point
+│   └── index.css           # Global styles
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions deployment workflow
+└── package.json            # Project dependencies and scripts
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## SEO Optimizations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Meta description and keywords
+- Open Graph tags for social media sharing
+- Semantic HTML structure
+- Sitemap.xml for search engines
+- Responsive design for mobile SEO
+- Fast loading times with optimized React build
 
-### Code Splitting
+## Contact Form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The contact form uses Formspree for form handling. To set up your own:
 
-### Analyzing the Bundle Size
+1. Sign up at [formspree.io](https://formspree.io)
+2. Create a new form
+3. Update the `action` URL in `src/components/Contact.js` with your Formspree form ID
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Browser Support
 
-### Making a Progressive Web App
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+© 2026 Daria Shchukina. All rights reserved.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is a personal portfolio site. For issues or suggestions, please open an issue on GitHub.
